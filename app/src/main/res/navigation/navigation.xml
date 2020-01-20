@@ -4,7 +4,7 @@
     app:startDestination="@id/listFragment">
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.example.oiltracker.ui.fragments.ListFragment"
+        android:name="com.falanapp.oiltracker.ui.fragments.ListFragment"
         android:label="ListFragment" >
         <action
             android:id="@+id/action_listFragment_to_detailFragment4"
@@ -12,7 +12,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.example.oiltracker.ui.fragments.DetailFragment"
+        android:name="com.falanapp.oiltracker.ui.fragments.DetailFragment"
         android:label="DetailFragment" >
         <argument
             android:name="number"

@@ -1,4 +1,4 @@
-package com.example.oiltracker
+package com.falanapp.oiltracker
 
 import org.junit.Test
 

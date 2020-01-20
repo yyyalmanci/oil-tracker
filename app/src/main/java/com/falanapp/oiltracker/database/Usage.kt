@@ -1,4 +1,4 @@
-package com.example.oiltracker.database
+package com.falanapp.oiltracker.database
 
 import android.content.Context
 import androidx.room.Database

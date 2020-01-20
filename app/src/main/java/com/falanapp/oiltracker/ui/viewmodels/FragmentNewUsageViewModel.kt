@@ -1,14 +1,10 @@
-package com.example.oiltracker.ui.viewmodels
+package com.falanapp.oiltracker.ui.viewmodels
 
 import android.app.Application
-import android.util.Log
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.example.oiltracker.database.Usage
-import com.example.oiltracker.database.UsageDao
+import com.falanapp.oiltracker.database.Usage
+import com.falanapp.oiltracker.database.UsageDao
 import kotlinx.coroutines.*
-import java.lang.Appendable
 
 class FragmentNewUsageViewModel(val database: UsageDao, application: Application) :
     AndroidViewModel(application) {

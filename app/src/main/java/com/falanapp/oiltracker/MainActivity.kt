@@ -1,4 +1,4 @@
-package com.example.oiltracker
+package com.falanapp.oiltracker
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

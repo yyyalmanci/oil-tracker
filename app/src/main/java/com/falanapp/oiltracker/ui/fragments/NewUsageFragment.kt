@@ -1,7 +1,6 @@
-package com.example.oiltracker.ui.fragments
+package com.falanapp.oiltracker.ui.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,10 +8,10 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
-import com.example.oiltracker.R
-import com.example.oiltracker.database.UsageDatabase
-import com.example.oiltracker.ui.viewmodels.FragmentNewUsageViewModel
-import com.example.oiltracker.ui.viewmodels.FragmentNewUsageViewModelFactory
+import com.falanapp.oiltracker.R
+import com.falanapp.oiltracker.database.UsageDatabase
+import com.falanapp.oiltracker.ui.viewmodels.FragmentNewUsageViewModel
+import com.falanapp.oiltracker.ui.viewmodels.FragmentNewUsageViewModelFactory
 
 
 class NewUsageFragment : Fragment(){

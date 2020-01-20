@@ -1,4 +1,4 @@
-package com.example.oiltracker.ui.viewmodels
+package com.falanapp.oiltracker.ui.viewmodels
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
