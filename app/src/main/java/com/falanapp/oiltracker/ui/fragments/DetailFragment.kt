@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.falanapp.oiltracker.R
+import com.falanapp.oiltracker.database.UsageDatabase
+
 class DetailFragment : Fragment(){
 
 
@@ -15,15 +17,9 @@ class DetailFragment : Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-
-        val view = inflater.inflate(R.layout.detail_fragment,container,false)
-
-        val textView: TextView = view.findViewById(R.id.text)
-
-        val number = DetailFragmentArgs.fromBundle(arguments!!).number
-
-        textView.text = number.toString()
+        val view = inflater.inflate(R.layout.fragment_detail, container, false)
+        val application = requireNotNull(this.activity).application
+        val dataSource = UsageDatabase.getInstance(application).UsageDao
 
 
         return view

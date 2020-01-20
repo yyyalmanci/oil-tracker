@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_deneme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        tool:text="FRAGMENT TWO"
+        android:textAlignment="center"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_deneme2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        tool:text="FRAGMENT TWO"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="güncelle"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

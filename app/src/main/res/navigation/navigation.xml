@@ -7,8 +7,11 @@
         android:name="com.falanapp.oiltracker.ui.fragments.ListFragment"
         android:label="ListFragment" >
         <action
-            android:id="@+id/action_listFragment_to_detailFragment4"
+            android:id="@+id/action_listFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_newUsageFragment"
+            app:destination="@id/newUsageFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
@@ -18,4 +21,8 @@
             android:name="number"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/newUsageFragment"
+        android:name="com.falanapp.oiltracker.ui.fragments.NewUsageFragment"
+        android:label="NewUsageFragment" />
 </navigation>
