@@ -11,7 +11,6 @@ class FragmentNewUsageViewModel(val database: UsageDao, application: Application
 
     private var viewModelJob = Job()
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
-    val usages = database.getAllUsages()
 
     fun insertUsage(id:Int,deneme: String,deneme2: String){
         uiScope.launch {
@@ -24,18 +23,6 @@ class FragmentNewUsageViewModel(val database: UsageDao, application: Application
     private suspend fun  insert(usage: Usage){
         withContext(Dispatchers.IO){
             database.insert(usage)
-        }
-    }
-
-    fun onClear(){
-        uiScope.launch {
-            clear()
-        }
-    }
-
-    private suspend fun clear(){
-        withContext(Dispatchers.IO){
-            database.clear()
         }
     }
 
