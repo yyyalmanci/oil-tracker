@@ -4,14 +4,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.falanapp.oiltracker.R
 import com.falanapp.oiltracker.database.Usage
+import com.falanapp.oiltracker.ui.fragments.DetailFragment
+import com.falanapp.oiltracker.ui.fragments.ListFragment
+import com.falanapp.oiltracker.ui.fragments.ListFragmentDirections
+import com.falanapp.oiltracker.ui.fragments.NewUsageFragment
 
 
-class UsagesAdapter(val clickListener: UsageListener) :
+class UsagesAdapter(private val navController: NavController) :
     ListAdapter<Usage, UsagesAdapter.ViewHolder>(SleepNightDiffCallback()) {
 
 
@@ -29,7 +36,7 @@ class UsagesAdapter(val clickListener: UsageListener) :
         holder.t1.text = item.deneme
         holder.t2.text = item.deneme2
         holder.itemView.setOnClickListener {
-            clickListener.onClick(item)
+            navController.navigate(ListFragmentDirections.actionListFragmentToDetailFragment(item.usageId))
         }
     }
 
@@ -39,10 +46,6 @@ class UsagesAdapter(val clickListener: UsageListener) :
 
     }
 
-}
-
-class UsageListener(val clickListener: (usageId: Int) -> Unit) {
-    fun onClick(usage: Usage) = clickListener(usage.usageId)
 }
 
 class SleepNightDiffCallback : DiffUtil.ItemCallback<Usage>() {

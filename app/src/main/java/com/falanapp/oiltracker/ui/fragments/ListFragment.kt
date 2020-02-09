@@ -5,14 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.example.deneme.ui.fragments.UsageListener
 import com.example.deneme.ui.fragments.UsagesAdapter
 import com.falanapp.oiltracker.R
 import com.falanapp.oiltracker.database.UsageDatabase
@@ -37,13 +36,11 @@ class ListFragment : Fragment() {
         val dataSource = UsageDatabase.getInstance(application).UsageDao
         val viewModelFactory = FragmentListViewModelFactory(dataSource, application)
         val fragmentListViewModel =
-            ViewModelProviders.of(this, viewModelFactory).get(FragmentListViewModel::class.java)
+            ViewModelProvider(this, viewModelFactory).get(FragmentListViewModel::class.java)
 
         bindViews(view)
 
-        val adapter = UsagesAdapter(UsageListener {
-            findNavController().navigate(ListFragmentDirections.actionListFragmentToDetailFragment(it))
-        })
+        val adapter = UsagesAdapter(findNavController())
 
         list.adapter = adapter
 
